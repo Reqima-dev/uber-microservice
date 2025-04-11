@@ -6,6 +6,7 @@ import {
   RiderCoordinate,
   RiderCoordinatesSchema,
 } from './schemas/rider-coordinates.schema';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
@@ -13,6 +14,12 @@ import {
       {
         name: RiderCoordinate.name,
         schema: RiderCoordinatesSchema,
+      },
+    ]),
+    ClientsModule.register([
+      {
+        name: 'RIDER_SERIVCE',
+        transport: Transport.TCP,
       },
     ]),
   ],
