@@ -6,7 +6,7 @@ POST http://localhost:5003/rider-coordinates
 Content-Type: application/json
 
 {
-   "lat": 37.7749,
+   "lat": 7749,
   "long": -122.4194,
   "rider": "dfez4f4-4d3b-4a2c-8e5b-1f3c4e5f6a7b"
 }

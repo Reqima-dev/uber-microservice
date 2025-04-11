@@ -10,6 +10,9 @@ export class RiderCoordinatesService {
     @InjectModel(RiderCoordinate.name)
     private readonly riderCoordinatesModel: Model<RiderCoordinate>,
   ) {}
+  async getRiderCoordinates() {
+    return await this.riderCoordinatesModel.find();
+  }
   async saveRiderCoordinates(createCoordinateDto: CreateCoordinatesDto) {
     return await this.riderCoordinatesModel.create(createCoordinateDto);
   }
